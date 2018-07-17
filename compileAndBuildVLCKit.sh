@@ -1039,8 +1039,7 @@ if [ "$VLCROOT" = "" ]; then
         chmod +x vlc/contrib/bootstrap
         chmod +x vlc/contrib/src/*.sh
         chmod +x vlc/doc/*.sh
-        chmod +x vlc/extra/tools/bootstrap
-        chmod +x vlc/libltdl/config/*
+        chmod +x vlc/extras/tools/bootstrap
         chmod +x vlc/modules/*.sh
         chmod +x vlc/share/utils/*.sh
         chmod +x vlc/src/check_*
