@@ -249,6 +249,11 @@ extern NSString * VLCMediaPlayerStateToString(VLCMediaPlayerState state);
  */
 - (void)saveVideoSnapshotAt:(NSString *)path withWidth:(int)width andHeight:(int)height;
 
+- (int)saveVideoRecordAt:(NSString *)path;
+- (BOOL)isVideoRecording;
+- (BOOL)isVideoRecordable;
+- (int)startVideoRecord:(NSString *)path;
+- (int)stopVideoRecord;
 /**
  * Enable or disable deinterlace filter
  *

@@ -103,7 +103,7 @@ static VLCLibrary * sharedLibrary = nil;
         vlcParams = @[@"--no-color",
                       @"--no-osd",
                       @"--no-video-title-show",
-                      @"--no-stats",
+                      @"--stats",
                       @"--no-snapshot-preview",
                       @"--http-reconnect",
 #ifndef NOSCARYCODECS
@@ -112,7 +112,7 @@ static VLCLibrary * sharedLibrary = nil;
 #endif
 #endif
                       @"--text-renderer=freetype",
-                      @"--avi-index=3",
+//                      @"--avi-index=3",
                       @"--audio-resampler=soxr"];
     }
 #else

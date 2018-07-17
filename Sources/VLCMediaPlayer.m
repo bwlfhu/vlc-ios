@@ -569,7 +569,32 @@ static void HandleMediaPlayerSnapshot(const libvlc_event_t * event, void * self)
     if (failure)
         [[NSException exceptionWithName:@"Can't take a video snapshot" reason:@"No video output" userInfo:nil] raise];
 }
-
+- (int)saveVideoRecordAt:(NSString *)path
+{
+    if (libvlc_media_player_is_recording(_playerInstance)) {
+        return libvlc_media_player_record_stop(_playerInstance);
+    }
+    else if (libvlc_media_player_is_recordable(_playerInstance)) {
+        return libvlc_media_player_record_start(_playerInstance, [path UTF8String]);
+    }
+    else return -1;
+}
+- (BOOL)isVideoRecording
+{
+    return libvlc_media_player_is_recording(_playerInstance);
+}
+- (BOOL)isVideoRecordable
+{
+    return libvlc_media_player_is_recordable(_playerInstance);
+}
+- (int)startVideoRecord:(NSString *)path
+{
+    return libvlc_media_player_record_start(_playerInstance, [path UTF8String]);
+}
+- (int)stopVideoRecord
+{
+    return libvlc_media_player_record_stop(_playerInstance);
+}
 - (void)setDeinterlaceFilter:(NSString *)name
 {
     if (!name || name.length < 1)
