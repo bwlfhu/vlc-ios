@@ -1033,19 +1033,18 @@ if [ "$VLCROOT" = "" ]; then
             git clone https://github.com/bwlfhu/vlc.git vlc
             info "Applying patches to vlc.git"
         fi
-		chmod +x *.sh
-        chmod +x libvlc/vlc/bootstrap
-        chmod +x libvlc/vlc/make-alias
-	    chmod +x libvlc/vlc/autotools/*
-	    chmod +x libvlc/vlc/contrib/bootstrap
-	    chmod +x libvlc/vlc/contrib/src/*.sh
-	    chmod +x libvlc/vlc/doc/*.sh
-	    chmod +x libvlc/vlc/extra/tools/bootstrap
-	    chmod +x libvlc/vlc/libltdl/config/*
-	    chmod +x libvlc/vlc/modules/*.sh
-	    chmod +x libvlc/vlc/share/utils/*.sh
-	    chmod +x libvlc/vlc/src/check_*
-	    chmod +x libvlc/vlc/test/*.sh
+        chmod +x vlc/bootstrap
+        chmod +x vlc/make-alias
+        chmod +x vlc/autotools/*
+        chmod +x vlc/contrib/bootstrap
+        chmod +x vlc/contrib/src/*.sh
+        chmod +x vlc/doc/*.sh
+        chmod +x vlc/extra/tools/bootstrap
+        chmod +x vlc/libltdl/config/*
+        chmod +x vlc/modules/*.sh
+        chmod +x vlc/share/utils/*.sh
+        chmod +x vlc/src/check_*
+        chmod +x vlc/test/*.sh
     fi
 
     spopd
