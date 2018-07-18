@@ -565,7 +565,7 @@ static void HandleMediaPlayerSnapshot(const libvlc_event_t * event, void * self)
 
 - (void)saveVideoSnapshotAt:(NSString *)path withWidth:(int)width andHeight:(int)height
 {
-    int failure = libvlc_video_take_snapshot(_playerInstance, 0, [path UTF8String], width, height);
+    int failure = libvlc_video_take_snapshot(_playerInstance, 0, [path UTF8String], width, height, false);
     if (failure)
         [[NSException exceptionWithName:@"Can't take a video snapshot" reason:@"No video output" userInfo:nil] raise];
 }
